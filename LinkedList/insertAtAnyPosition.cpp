@@ -24,6 +24,18 @@ Node  *insertAtEnd(Node*head, int x){
 
 
 Node insertAtpos(Node*head, int pos, int data){
-    
+      
+    Node *curr= head;
+    Node *temp = new Node(data);
+
+    for(int i=0;i<pos-2 && head!=NULL;i++){
+        cur=curr->next;
+    }
+    if(curr==NULL){
+        return head;
+    }
+    temp->next=curr->next;
+    curr->next=temp;
+    return head;
 
 }
