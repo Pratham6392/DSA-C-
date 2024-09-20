@@ -56,6 +56,17 @@ void printNodes(Node*root)
 
 queue<Node*> q;
 q.push(root);
+while(q.empty()==false){
+    Node*curr=q.front();
+    q.pop();
+    cout<<curr->data<<" ";
+    if(curr->left!=NULL){    // Add left child to the queue
+        q.push(curr->left);
+    }
+    if(curr->right!=NULL){    // Add right child to the queue
+        q.push(curr->right);
+    }
+}
 
 
 
