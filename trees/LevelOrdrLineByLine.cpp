@@ -10,7 +10,7 @@ void levelOrder(Node *root)
     queue<Node *> q;
     q.push(root);
     q.push(NULL);
-    while (!q.empty())
+    while (q.size() > 1)
     {
         Node *curr = q.front();
 
@@ -18,10 +18,7 @@ void levelOrder(Node *root)
         if (curr == NULL)
         {
             cout << endl;
-            if (q.empty() == false)
-            {
-                q.push(NULL);
-            }
+            q.push(NULL);
             continue;
         }
 
